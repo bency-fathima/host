@@ -33,6 +33,10 @@ app.use("/uploads", express.static("uploads"));
 
 app.use("/api/v1", router1)
 
+app.get("/", (req, res) => {
+  res.send("Backend is working!");
+});
+
 
 
 mongoose.connect(process.env.MONGOURI)
