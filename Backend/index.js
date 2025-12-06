@@ -7,6 +7,7 @@ import mongoose from 'mongoose'
 // import nutritionLogRoutes from './routes/nutrition/logRoutes.js'
 // import assignNRoutes from './routes/nutrition/assignRoutes.js'
 import dotenv from 'dotenv'
+import cors from 'cors'
 // import router from './routes/authRoutes.js'
 import router1 from "./routes/index.js"
 const app= express()
@@ -16,7 +17,7 @@ dotenv.config()
 // BODY PARSER MUST COME FIRST
 app.use(express.json())
 // app.use(express.urlencoded({ extended: true }))
-
+app.use(cors())
 app.use("/uploads", express.static("uploads"));
 
 
